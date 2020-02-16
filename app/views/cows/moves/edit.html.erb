@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>No.<%= @cow.number %> Move!</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Status</th>
+    <th>Stall</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @cows.each do |cow| %>
+    <tr>
+      <td><%= cow.number %></td>
+      <td><%= cow.name %></td>
+      <td><%= cow.birthday %></td>
+      <td><%= cow.status %></td>
+      <td><%= cow.stall %></td>
+      <td>
+        <%= link_to 'Bring Here', cow_move_path(cow:{move_id: cow.id}), method: :put %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

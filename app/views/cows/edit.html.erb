@@ -2,5 +2,5 @@
 
 <%= render 'form', cow: @cow %>
 
-<%= link_to 'Show', @cow %> |
+<%= link_to 'Destroy', @cow, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Back', cows_path %>
