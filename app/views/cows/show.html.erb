@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @cow.number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cow.name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @cow.birthday %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @cow.status %>
+</p>
+
+<p>
+  <strong>Stall:</strong>
+  <%= @cow.stall %>
+</p>
+
+<%= link_to 'Edit', edit_cow_path(@cow) %> |
+<%= link_to 'Back', cows_path %>
